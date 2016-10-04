@@ -90,8 +90,9 @@ def simulate(g, n, n_e, B_init, toSave, outputfile_name):
             g.vs[v]["color"] = SAVED
 
     # Gera o vídeo
-    print(subprocess.check_output(["ffmpeg", "-y", "-framerate", "1/3", "-start_number", "0", "-i", str(tmpdir.name) + "/out%d.png",
-                                   "-c:v", "libx264", "-r", "30", "-qscale", "1", "-pix_fmt", "yuv420p", "-threads", "0", outputfile_name]))
+    devnull = open(os.devnull, 'w')
+    subprocess.call(["ffmpeg", "-y", "-framerate", "1/3", "-start_number", "0", "-i", str(tmpdir.name) + "/out%d.png",
+                     "-c:v", "libx264", "-r", "30", "-qscale", "1", "-pix_fmt", "yuv420p", "-threads", "0", outputfile_name], stdout=devnull, stderr=devnull)
 
 
 def main(argv):
