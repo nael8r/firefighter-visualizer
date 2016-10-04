@@ -19,11 +19,11 @@ A simple visualizer for solutions to intances of the firefighter problem on grap
 
 \<Number of vertices to be saved in the solution\>
 
-\<Vertices to be saved in the solution, in form: <\vertex ID\> <\time\>\>
+\<Vertices to be saved in the solution, in form: \<vertex ID\> \<time\>\>
 
 \<Number of vertices to be burned in the solution\>
 
-\<Vertices to be burned in the solution, in form: <\vertex ID\> <\time\>\>
+\<Vertices to be burned in the solution, in form: \<vertex ID\> \<time\>\>
 
 See the file **sol1.txt** for an example.
 
