@@ -3,7 +3,7 @@ A simple visualizer for solutions to intances of the firefighter problem on grap
 
 # Usage
 
-`./view_ffp_sol.py -i  <input_file> -o <output_file>.mp4`
+`./view_ffp_sol.py -i  <input_file>`
 
 # Input file format
 
@@ -17,7 +17,13 @@ A simple visualizer for solutions to intances of the firefighter problem on grap
 
 \<Edges of the graph, onde per line, format: \<source\> \<destination\>\>
 
-\<Vertices to be saved in the solution, space separated\>
+\<Number of vertices to be saved in the solution\>
+
+\<Vertices to be saved in the solution, in form: <\vertex ID\> <\time\>\>
+
+\<Number of vertices to be burned in the solution\>
+
+\<Vertices to be burned in the solution, in form: <\vertex ID\> <\time\>\>
 
 See the file **sol1.txt** for an example.
 
@@ -26,4 +32,3 @@ See the file **sol1.txt** for an example.
 **igraph** package for python 3: http://igraph.org/python
 
 **ffmpeg**: https://ffmpeg.org/download.html
-
