@@ -104,6 +104,7 @@ def simulate2(g, n, n_e, B_init, to_save, to_burn, max_t, outputfile_name):
     UNTOUCHED = "#A9A9A9"
     BURNED = "#FF0000"
     SAVED = "#00FF00"
+    THREAT = "#00CED1"
     # cria um diretório temporário para as imagens
     tmpdir = tempfile.TemporaryDirectory()
     # espessura das arestas
@@ -137,6 +138,12 @@ def simulate2(g, n, n_e, B_init, to_save, to_burn, max_t, outputfile_name):
             g.vs[v]["color"] = BURNED
             g.vs[v]["label"] = str(v) + "/" + str(t)
             g.vs[v]["label_color"] = "#FFFFFF"
+            for e_u in g.incident(v):
+                u = int(g.es[e_u].target)
+                if u == v:
+                    u = int(g.es[e_u].source)
+                if g.vs[u]["color"] == UNTOUCHED:
+                    g.vs[u]["color"] = THREAT
         plot(g, **visual_style, target=str(tmpdir.name) +
              '/out' + str(t) + '.png')
 
