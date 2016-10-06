@@ -32,3 +32,15 @@ See the file **sol1.txt** for an example.
 **igraph** package for python 3: http://igraph.org/python
 
 **ffmpeg**: https://ffmpeg.org/download.html
+
+# Example
+
+Output example:
+
+- **Green**: Defended
+- **Gray**: Untouched
+- **Blue**: Threatened
+- **Red**: Burned
+- **Node**: (ID/time of event)
+
+![Exemplo de saída](https://raw.githubusercontent.com/nael8r/firefighter-visualizer/master/example.gif)
